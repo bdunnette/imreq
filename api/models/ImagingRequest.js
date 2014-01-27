@@ -12,7 +12,10 @@ module.exports = {
   
   afterUpdate: function (values, next) {
     console.log(values);
-    EmailService.sendNotificationEmail({email: values.requestor});
+    if (values.requestor) {
+      var modality = values.modality || '';
+      EmailService.sendNotificationEmail({email: values.requestor, specimenID: values.specimenID, modality: modality});
+    };
     next();
   }
 

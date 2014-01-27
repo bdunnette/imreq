@@ -11,10 +11,10 @@ exports.sendNotificationEmail = function (options) {
   });
 
   var opts = {
-    "subject": "test!",
-    "from": "dunn0172@umn.edu",
+    "subject": "Images for " + options.specimenID,
+    "from": sails.config.gmail.user,
     "to": options.email,
-    "text": "Requested images for U14-XYZ are ready!"
+    "text": "Requested " + options.modality + " images for specimen #" + options.specimenID + " are ready."
   }
   
   transport.sendMail(opts, function (err, response) {
