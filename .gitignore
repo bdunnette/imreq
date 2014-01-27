@@ -43,3 +43,4 @@ assets/linker/bower_components
 # local config
 ########################
 config/local.js
+config/gmail.js
