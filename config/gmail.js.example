@@ -1,0 +1,4 @@
+module.exports.gmail = {
+    user: 'somebody@gmail.com',
+    pass: 'PutYourPasswordHere'
+};
