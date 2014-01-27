@@ -8,12 +8,12 @@
 
 module.exports = {
 
-  attributes: {
-  	
-  	/* e.g.
-  	nickname: 'string'
-  	*/
-    
+  attributes: {},
+  
+  afterUpdate: function (values, next) {
+    console.log(values);
+    EmailService.sendNotificationEmail({email: values.requestor});
+    next();
   }
 
 };
