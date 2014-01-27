@@ -1,0 +1,23 @@
+{
+  "name": "imreq",
+  "version": "0.0.1",
+  "homepage": "https://github.com/bdunnette/imreq",
+  "authors": [
+    "Brian Dunnette <dunn0172@umn.edu>"
+  ],
+  "main": "app.js",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "assets/linker/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.0",
+    "angular": "~1.2.10"
+  }
+}
