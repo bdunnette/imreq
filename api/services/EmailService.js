@@ -14,7 +14,7 @@ exports.sendNotificationEmail = function (options) {
     "subject": "Images for " + options.specimenID,
     "from": sails.config.gmail.user,
     "to": options.email,
-    "text": "Requested " + options.modality + " images for specimen #" + options.specimenID + " are ready."
+    "text": "Requested " + options.modality + " images for specimen #" + options.specimenID + " are ready.\n\n" + options.link
   }
   
   transport.sendMail(opts, function (err, response) {

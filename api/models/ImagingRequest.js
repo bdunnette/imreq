@@ -14,7 +14,8 @@ module.exports = {
     console.log(values);
     if (values.requestor) {
       var modality = values.modality || '';
-      EmailService.sendNotificationEmail({email: values.requestor, specimenID: values.specimenID, modality: modality});
+      var link = values.link || '';
+      EmailService.sendNotificationEmail({email: values.requestor, specimenID: values.specimenID, modality: modality, link: link});
     };
     next();
   }
